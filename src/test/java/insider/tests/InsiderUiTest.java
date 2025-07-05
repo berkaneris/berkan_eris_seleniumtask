@@ -1,7 +1,7 @@
 package insider.tests;
 
 import insider.pages.*;
-import insider.utils.DriverManager;
+import insider.driver.DriverManager;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 

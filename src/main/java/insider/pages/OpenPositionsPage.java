@@ -1,7 +1,7 @@
 package insider.pages;
 
 import insider.utils.BrowserUtils;
-import insider.utils.DriverManager;
+import insider.driver.DriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

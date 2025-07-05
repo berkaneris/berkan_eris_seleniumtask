@@ -1,4 +1,4 @@
-package insider.utils;
+package insider.driver;
 
 import insider.config.ConfigurationManager;
 import lombok.extern.log4j.Log4j2;
