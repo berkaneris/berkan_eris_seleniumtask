@@ -1,4 +1,4 @@
-# Insider UI Test Automation Framework
+# UI Test Automation Framework
 
 ![Java](https://img.shields.io/badge/Java-17-blue.svg) ![Maven](https://img.shields.io/badge/Maven-3.9+-orange.svg) ![TestNG](https://img.shields.io/badge/TestNG-7.x-green.svg) ![Selenium](https://img.shields.io/badge/Selenium-4.x-brightgreen.svg)
 
