@@ -19,7 +19,8 @@ public class InsiderUiTest extends BaseTest {
 		insiderHomePage.clickOnDeclineCookieButton();
 		assertTrue(insiderHomePage.isInsiderLogoDisplayed(), "Insider logo is not displayed on the home page.");
 
-		/* Select the “Company” menu in the navigation bar, select “Careers” and check
+		/*
+		 * Select the “Company” menu in the navigation bar, select “Careers” and check
 		 * Careerpage, its Locations, Teams, and Life at Insider blocks are open or not
 		 */
 		insiderHomePage.clickOnNavBarItem("Company");
@@ -66,7 +67,8 @@ public class InsiderUiTest extends BaseTest {
 				"Position locations do not contain 'Istanbul, Turkiye' after filtering by location.");
 		String positionName = openPositionsPage.getJobPositionName(1);
 
-		/* Click the “View Role” button and check that this action redirects us to the
+		/*
+		 * Click the “View Role” button and check that this action redirects us to the
 		 * Lever Application form page
 		 */
 		openPositionsPage.clickOnViewRoleButton(1);
