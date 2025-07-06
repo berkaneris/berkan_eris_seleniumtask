@@ -2,6 +2,7 @@ package insider.tests;
 
 import insider.pages.*;
 import insider.driver.DriverManager;
+import insider.utils.BrowserUtils;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
@@ -18,8 +19,9 @@ public class InsiderUiTest extends BaseTest {
 		insiderHomePage.clickOnDeclineCookieButton();
 		assertTrue(insiderHomePage.isInsiderLogoDisplayed(), "Insider logo is not displayed on the home page.");
 
-		// Select the “Company” menu in the navigation bar, select “Careers” and check
-		// Careerpage, its Locations, Teams, and Life at Insider blocks are open or not
+		/* Select the “Company” menu in the navigation bar, select “Careers” and check
+		 * Careerpage, its Locations, Teams, and Life at Insider blocks are open or not
+		 */
 		insiderHomePage.clickOnNavBarItem("Company");
 		insiderHomePage.clickOnCompanyDropdownMenuItem("Careers");
 		CareersPage careersPage = new CareersPage(DriverManager.getDriver());
@@ -64,17 +66,20 @@ public class InsiderUiTest extends BaseTest {
 				"Position locations do not contain 'Istanbul, Turkiye' after filtering by location.");
 		String positionName = openPositionsPage.getJobPositionName(1);
 
-		// Click the “View Role” button and check that this action redirects us to the
-		// Lever Application form page
+		/* Click the “View Role” button and check that this action redirects us to the
+		 * Lever Application form page
+		 */
 		openPositionsPage.clickOnViewRoleButton(1);
 		openPositionsPage.navigateToNewOpenedTab();
 		JobsLeverPage jobsLeverPage = new JobsLeverPage(DriverManager.getDriver());
-		String currentUrl = DriverManager.getDriver().getCurrentUrl();
-		assertTrue(currentUrl.contains("https://jobs.lever.co/useinsider"));
+
 		assertTrue(jobsLeverPage.isApplyForThisJobButtonDisplayed(),
 				"Apply for this job button is not displayed on the job details page.");
 		assertEquals(jobsLeverPage.getJobPositionName(), positionName,
 				"Job position name does not match on the open position page.");
+
+		String currentUrl = jobsLeverPage.getCurrentUrl();
+		assertTrue(currentUrl.contains("https://jobs.lever.co/useinsider"));
 
 	}
 
