@@ -15,7 +15,6 @@ A robust, maintainable and **parallel-ready** UI test automation framework built
 | **Page Object Model** | Clean separation between *page logic* and *test logic* for maximum readability & maintainability |
 | **Parallel Execution** | TestNG + Maven Surefire run tests in parallel at *method* level (default 4 threads – configurable) |
 | **Cross-Browser** | Run on Chrome, Firefox, Edge… just pass `-Dbrowser=<name>` (defaults to Chrome) |
-| **CI/CD Ready** | Zero-config CLI commands make it ideal for Jenkins / GitHub Actions / Azure DevOps pipelines |
 
 ---
 
@@ -50,7 +49,6 @@ berkan_eris_seleniumtask/
 | **AssertJ** | Fluent, readable assertions (better than JUnit/TestNG native) |
 | **ExtentReports 5** | Eye-catching HTML + JSON reports & historical trend graphs |
 | **Log4j 2** | Granular logging to console and files |
-| **Jackson / Gson** | JSON parsing (test data, API stubs) |
 | **Lombok** | Eliminates boilerplate (getters, builders, logs…) |
 
 All versions are locked in `pom.xml` for repeatable builds.
@@ -91,8 +89,6 @@ mvn clean test -Dbrowser=firefox
 # Edge
 mvn clean test -Dbrowser=edge
 
-# Headless Chrome (example of custom capability)
-mvn clean test -Dbrowser=chromeHeadless
 ```
 
 Behind the scenes:
@@ -141,17 +137,7 @@ Open the HTML report in any browser and drill into each step.
 
 ---
 
-## 🤖 Continuous Integration
 
-The Maven CLI commands make CI trivial:
-
-```bash
-mvn clean test -Dbrowser=chromeHeadless -Dsurefire.rerunFailingTestsCount=2
-```
-
-Integrate the above into **GitHub Actions**, **Jenkins**, **Azure DevOps** or any CI runner.  Store the generated HTML report as an artefact for each job.
-
----
 
 ## 📚 Useful Commands Cheat-Sheet
 
