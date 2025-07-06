@@ -1,6 +1,5 @@
 package insider.pages;
 
-import insider.utils.BrowserUtils;
 import lombok.extern.log4j.Log4j2;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
