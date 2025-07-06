@@ -69,6 +69,8 @@ public class InsiderUiTest extends BaseTest {
 		openPositionsPage.clickOnViewRoleButton(1);
 		openPositionsPage.navigateToNewOpenedTab();
 		JobsLeverPage jobsLeverPage = new JobsLeverPage(DriverManager.getDriver());
+		String currentUrl = DriverManager.getDriver().getCurrentUrl();
+		assertTrue(currentUrl.contains("https://jobs.lever.co/useinsider"));
 		assertTrue(jobsLeverPage.isApplyForThisJobButtonDisplayed(),
 				"Apply for this job button is not displayed on the job details page.");
 		assertEquals(jobsLeverPage.getJobPositionName(), positionName,
